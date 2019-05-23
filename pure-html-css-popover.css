@@ -1,0 +1,36 @@
+body {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.wrapper {
+  position: relative;
+  padding: 20px;
+}
+
+.trigger {
+  margin-bottom: 10px;
+}
+
+.content {
+  visibility: hidden;
+  background-color: #bfbfbf;
+  position: absolute;
+  padding: 15px;
+}
+
+.content:before {
+  position: absolute;
+  top: -10px;
+  content: "";
+  right: calc(50% - 10px);
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent #bfbfbf transparent;
+}
+
+.wrapper:hover .content {
+  visibility: visible;
+}
